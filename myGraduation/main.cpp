@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {	
+	//test
 	VideoCapture capture("D:\\AndroidStdio\\lanedetection\\GraduationProject\\²âÊÔÊı¾İ\\road.avi");
 	if (!capture.isOpened())
 		cout << "can not open" << endl;

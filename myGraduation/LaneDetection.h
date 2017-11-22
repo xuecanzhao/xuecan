@@ -13,6 +13,8 @@ public: LaneDetection();
 		void houghTransform();
 		void drawLines(Mat &src);
 		void track();
+		void TCLJudge(Mat &src);
+		void judge(Mat &src);
 		vector<Point2f> Ransac(vector<Point2f> data);
 private:	Mat gray;
 			Mat roi;
@@ -23,11 +25,13 @@ private:	Mat gray;
 			vector<Vec2f> rightLines;
 			vector<Vec2f> preLeftResult;
 			vector<Vec2f> preRightResult;
-			bool leftFlag;
-			bool rightFlag;
+			bool leftFlag, rightFlag,tclFlag;
+			float rthe, lthe,rp,lp,mid;
 			int leftErrorCount;
 			int rightErrorCount;
 			Kalman* leftKalman;
 			Kalman* rightKalman;
+			int currentStatue;//0为正常，-1为左移，1为右移
+			int TCLStatue;
 };
 #endif  

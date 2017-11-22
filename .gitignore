@@ -154,3 +154,8 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+myGraduation/images*/
+myGraduation/output*/
+myGraduation/x64
+x64/

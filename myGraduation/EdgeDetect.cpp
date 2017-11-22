@@ -8,13 +8,14 @@ void edgeDetect(Mat& src,Mat&dst)
 	//int thres=Otsu(src);
 	//threshold(src, src, thres, 255, 0);
 	int rows = src.rows;
-	int start =20;
-	int cols = src.cols-start;
+	int start =15;
+	//int cols = src.cols-start;
 	int difference = 0;
 	for (int i = 0; i < rows; i++)
 	{
 		uchar* ptr = src.ptr<uchar>(i);
 		uchar* data = dst.ptr<uchar>(i);
+		int cols = src.cols - start;
 		for (int j = start; j < cols; j++)
 		{
 			if (ptr[j] != 0)
@@ -27,7 +28,19 @@ void edgeDetect(Mat& src,Mat&dst)
 				data[j] = (unsigned char)(difference);
 			}
 		}
+		//if (start > 10)
+		//	start--;
 	}
+/*	Mat mm;
+	int width = dst.cols;
+	int height = dst.rows;
+	int left = 0;
+	int right = width;
+	int top = height / 3;
+	int bottom = height - 2;
+	Rect r1(left, top, right - left, bottom - top);
+	dst(r1).copyTo(mm);*/
+
 	int thres = Otsu(dst);
 	//GaussianBlur(dst, dst, Size(3, 3), 0, 0);
 	threshold(dst, dst, thres, 255, 0);

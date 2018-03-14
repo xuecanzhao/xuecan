@@ -80,15 +80,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cross.cpp" />
     <ClCompile Include="EdgeDetect.cpp" />
-    <ClCompile Include="Kalman.cpp" />
+    <ClCompile Include="Hough.cpp" />
+    <ClCompile Include="KalmanTrack.cpp" />
     <ClCompile Include="LaneDetection.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Otsu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cross.h" />
     <ClInclude Include="EdgeDetect.h" />
-    <ClInclude Include="Kalman.h" />
+    <ClInclude Include="Hough.h" />
+    <ClInclude Include="KalmanTrack.h" />
     <ClInclude Include="LaneDetection.h" />
     <ClInclude Include="Otsu.h" />
   </ItemGroup>

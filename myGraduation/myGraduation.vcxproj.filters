@@ -27,7 +27,13 @@
     <ClCompile Include="EdgeDetect.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Kalman.cpp">
+    <ClCompile Include="KalmanTrack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Hough.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cross.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +47,13 @@
     <ClInclude Include="EdgeDetect.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Kalman.h">
+    <ClInclude Include="KalmanTrack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Hough.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cross.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
